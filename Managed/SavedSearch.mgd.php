@@ -72,7 +72,7 @@ return [
                 'columns' => [
                   [
                     'key' => 'id',
-                    'label' => 'Contribution ID',
+                    'label' => E::ts('Contribution ID'),
                     'dataType' => 'Integer',
                     'type' => 'field',
                     'title' => 'View Contribution',
@@ -83,7 +83,7 @@ return [
                   ],
                   [
                     'key' => 'contact_id.display_name',
-                    'label' => 'Contact Name',
+                    'label' => E::ts('Contact Name'),
                     'dataType' => 'String',
                     'type' => 'field',
                     'link' => [
@@ -92,32 +92,38 @@ return [
                     ],
                   ],
                   [
+                    'key' => 'Contribution_EntityFinancialTrxn_FinancialTrxn_01.trxn_date',
+                    'label' => E::ts('Date'),
+                    'dataType' => 'String',
+                    'type' => 'field',
+                  ],
+                  [
                     'key' => 'Contribution_EntityFinancialTrxn_FinancialTrxn_01.check_number',
-                    'label' => 'Check Number',
+                    'label' => E::ts('Check Number'),
                     'dataType' => 'String',
                     'type' => 'field',
                   ],
                   [
                     'key' => 'Contribution_EntityFinancialTrxn_FinancialTrxn_01.trxn_id',
-                    'label' => 'Transaction ID',
+                    'label' => E::ts('Transaction ID'),
                     'dataType' => 'String',
                     'type' => 'field',
                   ],
                   [
                     'key' => 'Contribution_EntityFinancialTrxn_FinancialTrxn_01.payment_instrument_id:label',
-                    'label' => 'Payment Method',
+                    'label' => E::ts('Payment Method'),
                     'dataType' => 'Integer',
                     'type' => 'field',
                   ],
                   [
                     'key' => 'Contribution_EntityFinancialTrxn_FinancialTrxn_01.total_amount',
-                    'label' => 'Amount',
+                    'label' => E::ts('Amount'),
                     'dataType' => 'Money',
                     'type' => 'field',
                   ],
                   [
                     'key' => 'Contribution_EntityFinancialTrxn_FinancialTrxn_01.payment_processor_id:label',
-                    'label' => 'Payment Processor',
+                    'label' => E::ts('Payment Processor'),
                     'dataType' => 'Integer',
                     'type' => 'field',
                   ],

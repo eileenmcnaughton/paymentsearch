@@ -1,9 +1,13 @@
 <div af-fieldset="">
-  <div>
-    <af-field name="payment_instrument_id" defn="{input_attrs: {multiple: true}}"/>
+
+  <div class="af-container af-layout-inline">
+    <af-field name="payment_instrument_id" defn="{input_attrs: {multiple: true}}" />
     <af-field name="Contribution_EntityFinancialTrxn_FinancialTrxn_01.check_number" />
     <af-field name="Contribution_EntityFinancialTrxn_FinancialTrxn_01.trxn_id" />
-    <af-field name="Contribution_EntityFinancialTrxn_FinancialTrxn_01.trxn_date" defn="{input_type: 'Select', search_range: true, input_attrs: {}}" />
+  </div>
+  <div class="af-container af-layout-inline">
+    <af-field name="Contribution_EntityFinancialTrxn_FinancialTrxn_01.trxn_date"
+      defn="{input_type: 'Select', search_range: true, input_attrs: {}, label: 'Date'}" />
   </div>
   <crm-search-display-table search-name="Payment search" display-name="Payments"></crm-search-display-table>
 </div>
