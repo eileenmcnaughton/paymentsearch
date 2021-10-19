@@ -170,3 +170,24 @@ function paymentsearch_civicrm_navigationMenu(&$menu) {
   ));
   _paymentsearch_civix_navigationMenu($menu);
 }
+
+/**
+ * Alter api permissions to allow contacts with 'Access CiviContribute' but
+ * not 'Administer CiviCRM' to access the payment search.
+ *
+ * Note that these PRs are currently open to do this in core.
+ *
+ * https://github.com/civicrm/civicrm-core/pulls?q=is%3Apr+author%3Aeileenmcnaughton+2752
+ *
+ * @param $entity
+ * @param $action
+ * @param $params
+ * @param $permissions
+ */
+function paymentsearch_civicrm_alterAPIPermissions($entity, $action, &$params, &$permissions) {
+  $permissions['financial_type']['get'] = $permissions['contribution']['get'];
+  $permissions['financial_trxn']['get'] = $permissions['contribution']['get'];
+  $permissions['entity_financial_account']['get'] = $permissions['contribution']['get'];
+  $permissions['entity_financial_trxn']['get'] = $permissions['contribution']['get'];
+  $permissions['financial_account']['get'] = $permissions['contribution']['get'];
+}
