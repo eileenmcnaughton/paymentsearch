@@ -1,0 +1,7 @@
+{
+    "type": "search",
+    "title": "Payment search",
+    "server_route": "civicrm/payment-search",
+    "permission": "access CiviContribute",
+    "is_dashlet": true
+}
